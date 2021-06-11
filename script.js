@@ -12,7 +12,7 @@ function addR() {
     updateRowCounter()
     table.innerHTML += tr;
 
-    for (let i=0; i<numCols; i++)
+    for (let i = 0; i < numCols; i++)
         table.querySelectorAll("tr")[numRows - 1].innerHTML += td;
 }
 //Adds a column
@@ -27,18 +27,24 @@ function addC() {
 
 //Removes a row
 function removeR() {
+    if (numRows === 0)
+        return
+
     numRows--;
     updateRowCounter();
 
-    table.querySelectorAll("tr")[numRows].innerHTML = "";
+    table.querySelectorAll("tr")[numRows].remove();
 }
 //Remove a column
 function removeC() {
+    if (numCols === 0)
+        return
+
     numCols--;
     updateColCounter();
 
     for (let i = 0; i < numRows; i++) {
-        table.querySelectorAll("tr")[i].innerHTML = "";
+        table.querySelectorAll("tr")[i].querySelectorAll("td")[0].remove();
     }
 }
 //sets global var for selected color
