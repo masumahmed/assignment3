@@ -1,9 +1,14 @@
-tr,td{
-    border:1px;
+tr,
+td {
+    border: 1px;
     border-style: solid;
 }
-td{
-    height: 50px;
-    width: 50px;
+
+td {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
     background-color: white;
+    border: 1px solid black;
+    margin: 100px;
 }
