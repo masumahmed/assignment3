@@ -12,3 +12,19 @@ td {
     border: 1px solid black;
     margin: 100px;
 }
+
+.Red {
+    background-color: red !important;
+}
+
+.Green {
+    background-color: green !important;
+}
+
+.Blue {
+    background-color: blue !important;
+}
+
+.Yellow {
+    background-color: yellow !important;
+}
