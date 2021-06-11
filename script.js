@@ -27,11 +27,19 @@ function addC() {
 
 //Removes a row
 function removeR() {
-    alert("Clicked Remove Row")
+    numRows--;
+    updateRowCounter();
+
+    table.querySelectorAll("tr")[numRows].innerHTML = "";
 }
 //Remove a column
 function removeC() {
-    alert("Clicked Remove Col")
+    numCols--;
+    updateColCounter();
+
+    for (let i = 0; i < numRows; i++) {
+        table.querySelectorAll("tr")[i].innerHTML = "";
+    }
 }
 //sets global var for selected color
 function selected() {
